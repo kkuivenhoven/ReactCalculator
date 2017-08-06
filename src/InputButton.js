@@ -3,7 +3,8 @@
 import React, { Component } from 'react';
 import {
 	View,
-	Text
+	Text,
+	TouchableHighlight
 } from 'react-native';
 
 import Style from './Style';
@@ -14,9 +15,12 @@ export default class InputButton extends Component {
   // Props are basically static data that we can pass to child components
 	render() {
 		return (
-			<View style={Style.inputButton}>
+			<TouchableHighlight style={[Style.inputButton, this.props.highlight ? Style.inputButtonHighlighted : null]}
+			//<TouchableHighlight style={Style.inputButton} 
+			//										underlayColor="#193441" 
+													onPress={this.props.onPress}>
 				<Text style={Style.inputButtonText}>{this.props.value}</Text>
-			</View>
+			</TouchableHighlight>
 		)
 	}
 
