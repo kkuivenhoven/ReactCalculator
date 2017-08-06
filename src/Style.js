@@ -13,7 +13,27 @@ var Style = StyleSheet.create({
 	inputContainer: {
 		flex: 8,
 		backgroundColor: '#3E606F'
+	},
+
+	inputButton: {
+		flex: 1,
+		alignItems: 'center',
+		justifyContent: 'center',
+		borderWidth: 0.5,
+		borderColor: '#91AA9D'
+	},
+
+	inputButtonText: {
+		fontSize: 22,
+		fontWeight: 'bold',
+		color: 'white'
+	},
+
+	inputRow: {
+		flex: 1,
+		flexDirection: 'row'
 	}
+
 });
 
 // export the Style => reason is so that it can be used by other source files that import Style.js
